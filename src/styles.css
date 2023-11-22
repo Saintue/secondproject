@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap');
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  font-family: 'Roboto', sans-serif;
+  color: #85859B;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #323230;
+}
