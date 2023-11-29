@@ -2,10 +2,13 @@
 
 body {
   margin: 0 auto;
-  min-width: 1000px;
   font-family: 'Roboto', sans-serif;
   color: #85859B;
-  height: 100vh;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 a {
   text-decoration: none;

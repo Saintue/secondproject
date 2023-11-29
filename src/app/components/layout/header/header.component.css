@@ -1,0 +1,145 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.burger__container {
+  visibility: hidden;
+}
+
+.burger {
+  visibility: hidden;
+}
+
+.line {
+  border-bottom: 1px solid #020204;
+  width: 100%;
+  min-width: 1400px;
+}
+
+.header__line-wrapper {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center ;
+  margin-right: 270px;
+  font-family: 'unbuntu', sans-serif;
+  font-size: 20px;
+}
+
+.logo__circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #323230;
+}
+
+.logo__rectangle {
+  width: 18px;
+  height: 10px;
+  border-radius: 15px;
+  border: 1px solid #323230;
+}
+
+.logo__element {
+  margin-right: 3px;
+}
+
+.header__nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-button {
+  margin-right: 30px;
+  white-space: nowrap;
+}
+
+.header__nav-search-login {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  background: #ffffff;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.header__search {
+  border: none;
+  border-bottom: 1px solid #020204 ;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: #020204;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 0;
+  font-weight: bold;
+}
+
+.search:hover .header__search {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.header__search-login {
+  margin-right: 20px;
+}
+
+.header__search-login:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 500px) {
+
+
+  .burger__container{
+    visibility: visible;
+    width: 1400px;
+  }
+ .header__nav-buttons {
+   visibility: hidden;
+ }
+  .header__line-wrapper {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: nowrap;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+
+ .burger {
+   visibility: visible;
+ }
+
+}

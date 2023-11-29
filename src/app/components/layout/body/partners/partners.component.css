@@ -1,0 +1,39 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.partners {
+  display: flex;
+  background-color: #FFFFE0;
+  height: 400px;
+  min-width: 1400px;
+  align-items: center;
+}
+
+.partners__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partner__img-mods {
+  min-width: 270px;
+  min-height: 120px;
+  max-width: 270px;
+  max-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #020204;
+  margin-right: 30px;
+}
+
+.partner__img-mods:last-child{
+  margin-right: 0;
+}
+
+@media (min-width: 3000px) {
+  .partners {
+    height: 15.2%;
+  }
+}

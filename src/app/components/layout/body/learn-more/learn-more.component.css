@@ -1,0 +1,45 @@
+.container{
+  width: 1400px;
+}
+
+.learn-more__cards {
+  min-width: 1400px;
+  height: 645px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-more__cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.learn-more__card {
+  height: 465px;
+  width: 255px;
+  line-height: 25px;
+}
+
+.card__txt {
+  font-size: 18px;
+}
+
+.card__tiraje {
+  color: #B5B5BD;
+  line-height: 10px;
+}
+
+.card__img{
+  height: 180px;
+  width: 255px;
+}
+
+.card__referal {
+  color: #4a99d3;
+}
+@media (min-width: 3000px) {
+  .learn-more__cards {
+    height: 23.1%;
+  }
+}

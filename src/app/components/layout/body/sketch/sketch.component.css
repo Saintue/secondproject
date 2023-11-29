@@ -1,0 +1,45 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.shop__sketch {
+  padding-top: 60px;
+}
+
+.shop__sketch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.sketch__text-block {
+  min-width: 300px;
+  max-width: 300px;
+  height: 445px;
+}
+
+.sketch__h1-block {
+  width: 400px;
+  color: #4C5866;
+  font-size: 35px;
+}
+
+.sketch__p-block {
+  color: #85859B;
+  font-size: 16px;
+}
+
+
+.sketch__img-block {
+  margin-left: 100px;
+  height: 375px;
+  width: 540px;
+}
+
+@media (min-width: 3000px) {
+  .shop__sketch {
+    display: flex;
+    align-items: flex-end;
+    height: 16.1%;
+  }
+}

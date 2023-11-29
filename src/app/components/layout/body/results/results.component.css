@@ -1,0 +1,73 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.line__buttons {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.line {
+  border-top: 8px solid #020204;
+  width: 300px;
+  cursor: pointer;
+}
+.shop__results {
+  display: flex;
+  background-color: #FFFFE0;
+  min-width: 1400px;
+}
+
+.shop__results-versions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.shop__results-v1 {
+  display: flex;
+  min-width: 300px;
+}
+
+.shop__results-v2 {
+  display: flex;
+  min-width: 300px;
+}
+
+.shop__results-v3 {
+  display: flex;
+  min-width: 300px;
+}
+
+.shop__results-block {
+  margin-right: 250px;
+}
+
+.shop__results-txt-mods {
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.shop__results-h2 {
+  color: #666666
+}
+
+.shop__results-block:last-child {
+  margin-right: 0;
+}
+
+.shop__results-finale {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.shop__results-finale-txt {
+  max-width: 250px;
+  min-width: 250px;
+}
+
+.shop__results-finale-h2 {
+  color: #666666
+}

@@ -1,0 +1,15 @@
+.sketch__text-block-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 255px;
+  height: 70px;
+  border: 1px solid #7875FE;
+  color: #7875FE;
+  transition: color .2s ease;
+}
+
+.sketch__text-block-button:hover{
+  color: white;
+  background-color: #4a99d3;
+}

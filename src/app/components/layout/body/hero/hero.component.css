@@ -1,0 +1,51 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.shop__hero {
+  padding-top: 60px;
+}
+
+.shop__hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__text-block {
+  min-width: 361px;
+  max-width: 361px;
+  height: 445px;
+}
+
+.hero__h1-block {
+  color: #4C5866;
+  font-size: 45px;
+}
+
+.hero__p-block {
+  color: #85859B;
+  font-size: 16px;
+}
+
+.hero__button-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 255px;
+  height: 70px;
+  border: 1px solid #7875FE;
+  color: #7875FE;
+  transition: color .2s ease;
+}
+
+.hero__button-block:hover{
+  color: white;
+  background-color: #4a99d3;
+}
+
+.hero__img-block {
+  height: 560px;
+  width: 540px;
+}
