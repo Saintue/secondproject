@@ -6,18 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent {
-
-  toggler1:boolean = false;
-  toggler2:boolean = false;
-  toggler3:boolean = false;
-
-  toggle1(){
-   this.toggler1 = !this.toggler1;
-  }
-  toggle2(){
-    this.toggler2 = !this.toggler2;
-  }
-  toggle3(){
-    this.toggler3 = !this.toggler3;
-  }
+ tabs =[
+    {number: 1, state: true, },
+    {number: 2, state: true, },
+    {number: 3, state: true, },
+  ]
+  TabShow = (number:number) => {
+   this.tabs[number - 1].state =  !this.tabs[number - 1].state;
+}
 }

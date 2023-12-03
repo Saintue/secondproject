@@ -1,14 +1,19 @@
+
 <div class="learn-more__cards">
   <div class="container">
+    <app-select-sort (outEnterSortCardRadio)="sortCards($event)"></app-select-sort>
+    <app-sort (outEnterSortCard)="sortCards($event)"></app-sort>
     <div class="learn-more__cards-wrapper">
-      <div class="learn-more__card" *ngFor="let card of cards">
+      <div class="learn-more__card" *ngFor="let card of cardsCopy">
         <div class="card__img">
           <img src="assets/img/card/card{{card.number}}.png" alt="bombaga">
         </div>
-        <h2>{{card.title}}</h2>
+        <div class="card__txt-block">
+        <h2 class="card-title">{{card.title}}</h2>
         <h6 class="card__tiraje">{{card.tiraje}}</h6>
         <p class ="card__txt">{{card.content}}</p>
         <a href="#" class="card__referal">Подробнее  →</a>
+      </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,21 @@
+.sort__input {
+  font-size: 50px;
+}
+
+.sort__button{
+  font-size: 50px;
+}
+
+.sort__wrapper{
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px){
+  .sort__input {
+    font-size: 20px;
+  }
+
+  .sort__button{
+    font-size: 20px;
+  }
+}

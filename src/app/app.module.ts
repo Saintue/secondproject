@@ -17,6 +17,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { LearnMoreComponent } from './components/layout/body/learn-more/learn-more.component';
 import { BurgerComponent } from './components/ui/burger/burger.component';
+import { SortComponent } from './components/UI/sort/sort.component';
+import { SelectSortComponent } from './components/UI/select-sort/select-sort.component';
 
 const appRoutes: Routes = [
   {path:'products', component:ProductsComponent},
@@ -41,7 +43,9 @@ const appRoutes: Routes = [
     AboutComponent,
     ContactsComponent,
     LearnMoreComponent,
-    BurgerComponent
+    BurgerComponent,
+    SortComponent,
+    SelectSortComponent
   ],
   imports: [
     BrowserModule,

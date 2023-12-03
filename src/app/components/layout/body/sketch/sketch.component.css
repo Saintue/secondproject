@@ -1,5 +1,14 @@
+img{
+  position: relative;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
-  width: 1400px;
+  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -13,13 +22,13 @@
 }
 
 .sketch__text-block {
-  min-width: 300px;
   max-width: 300px;
+  width: 100%;
   height: 445px;
 }
 
 .sketch__h1-block {
-  width: 400px;
+  max-width: 400px;
   color: #4C5866;
   font-size: 35px;
 }
@@ -31,15 +40,61 @@
 
 
 .sketch__img-block {
-  margin-left: 100px;
+  margin-left: 50px;
   height: 375px;
-  width: 540px;
+  max-width: 540px;
+  width: 100%;
+}
+
+.sketch__img-block-wrapper{
+  display: flex;
+  align-items: flex-end;
+  height: 445px;
 }
 
 @media (min-width: 3000px) {
   .shop__sketch {
     display: flex;
     align-items: flex-end;
-    height: 16.1%;
+    height: 23.1%;
   }
 }
+
+@media screen and (max-width: 1400px) {
+
+  .container {
+    max-width: 700px;
+  }
+
+  .shop__sketch-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sketch__img-block-wrapper{
+    height: 230px;
+  }
+
+  .sketch__text-block{
+    height: 200px;
+  }
+
+  .sketch__img-block {
+    object-fit: contain;
+    height: 200px;
+    width: 240px;
+  }
+
+}
+
+@media screen and (max-width: 304px) {
+  sketch__img-block {
+    height: 200px;
+    width: 200px;
+  }
+  .sketch__img-block-wrapper{
+    width: 200px;
+    height: 300px;
+  }
+}
+
