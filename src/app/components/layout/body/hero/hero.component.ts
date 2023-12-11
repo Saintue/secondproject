@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
-  bruh(a:number):number {
-    return a;
-}
-  sum = (age:number | string):number | string => {
-    return age;
-  }
+
 }
