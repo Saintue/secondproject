@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
+import {FormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
@@ -19,12 +22,14 @@ import { LearnMoreComponent } from './components/layout/body/learn-more/learn-mo
 import { BurgerComponent } from './components/ui/burger/burger.component';
 import { SortComponent } from './components/UI/sort/sort.component';
 import { SelectSortComponent } from './components/UI/select-sort/select-sort.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 
 const appRoutes: Routes = [
   {path:'products', component:ProductsComponent},
   {path:'materials', component:MaterialsComponent},
   {path:'about', component:AboutComponent},
   {path:'contacts', component:ContactsComponent},
+  {path:'register', component:RegisterComponent}
 ]
 
 @NgModule({
@@ -45,14 +50,18 @@ const appRoutes: Routes = [
     LearnMoreComponent,
     BurgerComponent,
     SortComponent,
-    SelectSortComponent
+    SelectSortComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes, {enableTracing: true}
     ),
-    RouterOutlet
+    RouterOutlet,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

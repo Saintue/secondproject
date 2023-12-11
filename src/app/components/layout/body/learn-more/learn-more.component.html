@@ -1,20 +1,23 @@
-
 <div class="learn-more__cards">
   <div class="container">
-    <app-select-sort (outEnterSortCardRadio)="sortCards($event)"></app-select-sort>
-    <app-sort (outEnterSortCard)="sortCards($event)"></app-sort>
+    <input type="button" (click)="sartir()">СОРТИРОВАТЬ
     <div class="learn-more__cards-wrapper">
-      <div class="learn-more__card" *ngFor="let card of cardsCopy">
-        <div class="card__img">
-          <img src="assets/img/card/card{{card.number}}.png" alt="bombaga">
+      <div class="learn-more__card" *ngFor="let user of (users$ | async)">
+        <div class="card__txt">
+          <h3>{{user.title}}</h3>
         </div>
-        <div class="card__txt-block">
-        <h2 class="card-title">{{card.title}}</h2>
-        <h6 class="card__tiraje">{{card.tiraje}}</h6>
-        <p class ="card__txt">{{card.content}}</p>
-        <a href="#" class="card__referal">Подробнее  →</a>
+        <div class="card__txt">
+          {{user.description}}
+        </div>
+        <div class =card__img-wrapper>
+        <div class="card__img">
+        <img src="{{user.image}}">
+        </div>
+        </div>
+        </div>
       </div>
       </div>
     </div>
-  </div>
-</div>
+
+
+

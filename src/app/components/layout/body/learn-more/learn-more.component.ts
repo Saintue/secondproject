@@ -1,4 +1,15 @@
 import { Component } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Title} from "@angular/platform-browser";
+
+interface User {
+    id: number,
+    title: string,
+    price: string,
+    category: string,
+    description: string,
+    image: string
+}
 
 @Component({
   selector: 'app-learn-more',
@@ -33,11 +44,26 @@ export class LearnMoreComponent {
       type: "другое"},
   ];
 
+
   cardsCopy = this.cardsDbOriginal.slice();
-  sortCards(sort:string) {
+  sortCards(sort:string):void {
     this.cardsCopy = this.cardsDbOriginal.slice();
     this.cardsCopy = this.cardsCopy.filter(elem => elem.type.indexOf(sort.toLowerCase()) != -1)
   }
+
+  GetArray = [1,2,3,4,5,6,7,8];
+  response: any;
+  constructor(private http: HttpClient) {
+  }
+
+  users$ = this.http.get<User[]>("https://fakestoreapi.com/products");
+
+
+  sartir(){
+    this.users$ = this.http.get<User[]>('https://fakestoreapi.com/products/category/jewelery');
+  }
+
+
 
 }
 
