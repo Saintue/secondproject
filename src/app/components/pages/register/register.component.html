@@ -1,0 +1,77 @@
+<form class ="register__form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="field">
+    <label class="label">firstname</label>
+    <input type ="text"
+           maxlength ="30"
+           class="input"
+           formControlName="firstname"
+           [class.invalid]="registerForm.get('firstname')?.invalid &&
+           (registerForm.get('firstname')?.dirty ||
+            registerForm.get('firstname')?.touched) ||
+    isSumbmited
+           "
+    />
+  </div>
+  <div class="field">
+    <label class="label">lastname</label>
+    <input type ="text"
+           maxlength ="30"
+           class="input"
+           formControlName="lastname"
+           [class.invalid]="registerForm.get('lastname')?.invalid &&
+    (registerForm.get('lastname')?.dirty ||
+    registerForm.get('lastname')?.touched) ||
+    isSumbmited
+          "
+    />
+  </div>
+  <div class="field">
+    <label class="label">password</label>
+    <input type ="text"
+           maxlength ="30"
+           class="input"
+           formControlName="password"
+           [class.invalid]="registerForm.get('password')?.invalid &&
+    (registerForm.get('password')?.dirty ||
+    registerForm.get('password')?.touched) ||
+    isSumbmited
+          "/>
+  </div>
+  <div class="field">
+    <label class="label">confirmpassword</label>
+    <input type ="text"
+           maxlength ="30"
+           class="input"
+           formControlName="confirm"
+           [class.invalid]="registerForm.get('confirm')?.invalid &&
+    (registerForm.get('confirm')?.dirty ||
+    registerForm.get('confirm')?.touched) ||
+    isSumbmited
+          "/>
+  </div>
+  <span *ngIf="registerForm.errors?.['passwordMissMatch'] && registerForm.get('confirm')?.touched"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">пароли не совпадают</a></span>
+  <div class="field">
+    <label class="label">phone</label>
+    <input type ="text"
+           maxlength ="30"
+           class="input"
+           formControlName="phone"
+           [class.invalid]="registerForm.get('phone')?.invalid &&
+    (registerForm.get('phone')?.dirty ||
+    registerForm.get('phone')?.touched) ||
+    isSumbmited
+          "/>
+  </div>
+  <div class="field">
+    <label class="label">city</label>
+    <select formControlName="state" class="input">
+      <option *ngFor="let city of states">
+        {{city.name}}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <button type="submit" class="button">Register</button>
+  </div>
+</form>

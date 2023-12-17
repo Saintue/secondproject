@@ -1,0 +1,14 @@
+<div class="menu">
+  <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+  <label for="burger-checkbox" class="burger"></label>
+  <ul class="menu-list">
+    <li><a routerLink="/products" RouterLinkActive="active"
+           ariaCurrentWhenActive="page" class="menu-item" (click)="closeMenu()">Главная</a><li>
+    <li><a routerLink="/about" RouterLinkActive="active"
+           ariaCurrentWhenActive="page" class="menu-item" (click)="closeMenu()">О нас</a><li>
+    <li><a routerLink="/products" RouterLinkActive="active"
+           ariaCurrentWhenActive="page" class="menu-item" (click)="closeMenu()">Команда</a><li>
+    <li><a routerLink="/contacts" RouterLinkActive="active"
+           ariaCurrentWhenActive="page" class="menu-item" (click)="closeMenu()">Контакты</a><li>
+  </ul>
+</div>

@@ -1,0 +1,47 @@
+<header>
+  <div class="header__line">
+    <div class="container">
+      <div class="header__line-wrapper">
+        <a href="http://localhost:4200/" class="logo">
+          <div class ="logo__circle logo__element">
+          </div>
+          <div class="logo__company-name logo__element">
+            simple
+          </div>
+          <div class="logo__rectangle logo__element">
+          </div>
+          <div class="logo__circle logo__element">
+          </div>
+        </a>
+        <div class="header__nav-buttons">
+          <a routerLink="/products" RouterLinkActive="active"
+             ariaCurrentWhenActive="page" class="header__nav-button"> Продукция </a>
+          <a routerLink="/materials" RouterLinkActive="active"
+             ariaCurrentWhenActive="page" class="header__nav-button"> Материалы </a>
+          <a routerLink="/about" RouterLinkActive="active"
+             ariaCurrentWhenActive="page" class="header__nav-button"> О нас </a>
+          <a routerLink="/contacts" RouterLinkActive="active"
+             ariaCurrentWhenActive="page" class="header__nav-button"> Контакты </a>
+          <div class="header__nav-search-login">
+            <div class="search header__search-login">
+              <a class="search-btn">
+                <img src="assets/img/header-nav/search.png">
+              </a>
+              <input type="text" class="header__search" placeholder="Search...">
+            </div>
+            <a routerLink="/register" RouterLinkActive="active"
+               ariaCurrentWhenActive="page" class="header__nav-login header__search-login">
+              <img src="assets/img/header-nav/log_in.png" alt="login">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="burger__aligner">
+    <div class="burger__container">
+      <app-burger class="burger"></app-burger>
+    </div>
+  </div>
+</header>

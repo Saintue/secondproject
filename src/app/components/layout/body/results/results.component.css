@@ -1,0 +1,136 @@
+img{
+  position: relative;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.line__buttons {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  border-top: 8px solid #020204;
+  max-width: 300px;
+  min-width: 200px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.shop__results {
+  display: flex;
+  background-color: #FFFFE0;
+  width: 100%;
+  justify-content: center;
+}
+
+.shop__results-versions {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.shop__results-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.shop__results-tab {
+  cursor: pointer;
+  max-width: 250px;
+  min-width: 250px;
+  display: flex;
+  border-top: 4px solid #020204 ;
+}
+
+.shop__results-txt-mods {
+  max-width: 140px;
+  width: 100%;
+}
+
+.shop__results-h2 {
+  color: #666666
+}
+
+.shop__results-block:last-child {
+  margin-right: 0;
+}
+
+.shop__results-finale {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.shop__results-finale-txt {
+  max-width: 250px;
+ width: 100%;
+}
+
+.shop__results-finale-h2 {
+  color: #666666
+}
+
+.shop__results-img{
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+}
+
+.shop__results-finale-img {
+  object-fit: cover;
+  max-height: 568px;
+  max-width: 730px;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+
+  .container {
+    max-width: 700px;
+  }
+
+  .shop__results-finale {
+    padding-top: 30px;
+
+  }
+
+  .shop__results-finale-img{
+    object-fit: cover;
+    max-height: 768px;
+    max-width: 330px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .shop__results-finale{
+    flex-direction: column;
+    align-items: center;
+  }
+.shop__results-versions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop__results-tabs {
+  flex-direction: column;
+}
+
+.shop__results-tab {
+  margin-bottom: 20px;
+}
+
+  .shop__results-block:last-child {
+    margin-bottom: 0
+  }
+}
