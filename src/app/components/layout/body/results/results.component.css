@@ -6,7 +6,13 @@ img{
   height: 100%;
 }
 
-container {
+.active{
+  transition: 0.5s ease;
+  background-color: rgba(24,0,181);
+  opacity: 70%;
+}
+
+.container {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
@@ -43,12 +49,14 @@ container {
   display: flex;
   justify-content: space-between;
 }
+
 .shop__results-tab {
   cursor: pointer;
   max-width: 250px;
   min-width: 250px;
   display: flex;
   border-top: 4px solid #020204 ;
+  justify-content: center;
 }
 
 .shop__results-txt-mods {
@@ -87,8 +95,8 @@ container {
 
 .shop__results-finale-img {
   object-fit: cover;
-  max-height: 568px;
-  max-width: 730px;
+  max-height: 268px;
+  max-width: 430px;
   height: 100%;
   width: 100%;
 }

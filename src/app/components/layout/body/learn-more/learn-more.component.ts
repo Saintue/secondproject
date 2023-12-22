@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Title} from "@angular/platform-browser";
+import {ServiceService} from "../../../../service/service.service";
 
-interface User {
+interface product {
     id: number,
     title: string,
     price: string,
@@ -53,16 +54,18 @@ export class LearnMoreComponent {
 
   GetArray = [1,2,3,4,5,6,7,8];
   response: any;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private serviceService : ServiceService) {
   }
 
-  users$ = this.http.get<User[]>("https://fakestoreapi.com/products");
+  products$ = this.http.get<product[]>("https://fakestoreapi.com/products");
 
 
   sartir(){
-    this.users$ = this.http.get<User[]>('https://fakestoreapi.com/products/category/jewelery');
+    this.products$ = this.http.get<product[]>('https://fakestoreapi.com/products/category/jewelery');
   }
-
+addTocart(item: any){
+this.serviceService.addToCart(item);
+}
 
 
 }

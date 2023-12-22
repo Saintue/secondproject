@@ -2,19 +2,17 @@
   <div class="container">
     <div class="shop__results-versions">
       <div class="shop__results-tabs">
-        <div class="shop__results-tab" *ngFor="let tab of tabs" (click)="TabShow(tab.number)">
-          <div class="shop__results-img-block" *ngIf="tab.state">
-            <img src="assets/img/results/resultv{{tab.number}}.png">
+        <div class="shop__results-tab" *ngFor="let tab of tabs" (click)="TabShow(tab.number); tabSent(tab.number)" [ngClass]="{active: tab.state}">
+          <div class="shop__results-img-block">
           </div>
-          <div class="shop__results-text-block" *ngIf="tab.state">
+          <div class="shop__results-text-block">
             <h2>V.{{tab.number}}</h2>
-            <p>Результат вашего обучения</p>
           </div>
         </div>
       </div>
     <div class="shop__results-finale">
       <div class="shop__results-finale-img">
-        <img src="assets/img/results/resultfinale.png" alt="bombaga">
+        <img src="assets/img/results/resultv{{tabGet()}}.png">
       </div>
       <div class="shop__results-finale-txt">
         <h2 class="shop__results-finale-h2">Максимальная белизна</h2>

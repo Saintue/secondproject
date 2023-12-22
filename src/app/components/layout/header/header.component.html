@@ -1,4 +1,4 @@
-<header>
+<header class="header">
   <div class="header__line">
     <div class="container">
       <div class="header__line-wrapper">
@@ -22,6 +22,14 @@
              ariaCurrentWhenActive="page" class="header__nav-button"> О нас </a>
           <a routerLink="/contacts" RouterLinkActive="active"
              ariaCurrentWhenActive="page" class="header__nav-button"> Контакты </a>
+          <button routerLink="cart" class="header__cart header__nav-button">
+            <i>
+            Корзина
+            </i>
+            <span class="cart__badge">
+             {{TotalItem}}
+            </span>
+          </button>
           <div class="header__nav-search-login">
             <div class="search header__search-login">
               <a class="search-btn">
@@ -39,9 +47,9 @@
     </div>
   </div>
   <div class="line"></div>
-  <div class="burger__aligner">
-    <div class="burger__container">
-      <app-burger class="burger"></app-burger>
-    </div>
-  </div>
 </header>
+<div class="burger__aligner">
+  <div class="burger__container">
+    <app-burger class="burger"></app-burger>
+  </div>
+</div>

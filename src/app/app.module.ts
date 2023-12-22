@@ -23,13 +23,18 @@ import { BurgerComponent } from './components/ui/burger/burger.component';
 import { SortComponent } from './components/UI/sort/sort.component';
 import { SelectSortComponent } from './components/UI/select-sort/select-sort.component';
 import { RegisterComponent } from './components/pages/register/register.component';
+import { MainComponent } from './components/main/main.component';
+import { CartComponent } from './components/pages/cart/cart.component';
 
 const appRoutes: Routes = [
+  {path:'', redirectTo: '/main', pathMatch: 'full'},
+  {path: 'main', component:MainComponent},
   {path:'products', component:ProductsComponent},
   {path:'materials', component:MaterialsComponent},
   {path:'about', component:AboutComponent},
   {path:'contacts', component:ContactsComponent},
-  {path:'register', component:RegisterComponent}
+  {path:'register', component:RegisterComponent},
+  {path:'cart', component:CartComponent}
 ]
 
 @NgModule({
@@ -51,12 +56,14 @@ const appRoutes: Routes = [
     BurgerComponent,
     SortComponent,
     SelectSortComponent,
-    RegisterComponent
+    RegisterComponent,
+    MainComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
-      appRoutes, {enableTracing: true}
+      appRoutes,
     ),
     RouterOutlet,
     HttpClientModule,

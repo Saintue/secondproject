@@ -37,9 +37,8 @@ export class RegisterComponent {
       )
     isSumbmited:boolean = false;
 
-
     onSubmit(): void {
-    console.log("submit data", this.registerForm.value);
+        console.log("submit data", this.registerForm.value);
         this.isSumbmited = true;
     }
 }
