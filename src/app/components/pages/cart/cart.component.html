@@ -1,4 +1,4 @@
-<div *ngIf="product.length !=0" class="cart__wrapper">
+<div *ngIf="product.length !== 0" class="cart__wrapper">
     <div class="container">
         <div>
             <div>
@@ -26,10 +26,10 @@
                     </tr>
                     <tr>
                         <td colspan="4"></td>
-                        <td><button (click)="emptyCart()">удалить все</button></td>
+                        <td><button (click)="clearCart()">удалить все</button></td>
                         <td><button routerLink="">купить больше</button></td>
                         <td><button type="submit">к оплате</button></td>
-                        <td><strong>в целом : $ {{Total.toFixed(2)}}</strong></td>
+                        <td><strong>в целом : $ {{total.toFixed(2)}}</strong></td>
                     </tr>
                     </tbody>
                 </table>
@@ -39,7 +39,7 @@
 </div>
 
 
-<div *ngIf="product.length ==0" class="cart__wrapper">
+<div *ngIf="product.length == 0" class="cart__wrapper">
     <div class="container">
         <div class="card">
             <h5 class="card-title">Корзина</h5>

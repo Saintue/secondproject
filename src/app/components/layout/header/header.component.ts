@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ServiceService} from "../../../service/service.service";
+import {CartService} from "../../../services/cart.service";
 
 @Component({
   selector: 'app-header',
@@ -8,11 +8,11 @@ import {ServiceService} from "../../../service/service.service";
 })
 
 export class HeaderComponent implements OnInit{
-  public TotalItem : number = 0;
-constructor(private serviceService: ServiceService) {}
+  public totalItem : number = 0;
+constructor(private cartService: CartService) {}
   ngOnInit() {
-  this.serviceService.getProducts().subscribe(res=>{
-  this.TotalItem = res.length;
+  this.cartService.getProducts().subscribe(res=>{
+  this.totalItem = res.length;
   })
   }
 }

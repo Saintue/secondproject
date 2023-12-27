@@ -1,33 +1,29 @@
-import {Component, OnChanges, OnDestroy, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-burger',
   templateUrl: './burger.component.html',
   styleUrls: ['./burger.component.css']
 })
-export class BurgerComponent implements  OnDestroy{
+export class BurgerComponent{
 
-  closeMenu = () => {
-    let a: HTMLInputElement = <HTMLInputElement>document.getElementById("burger-checkbox");
-    if (a.checked) {
-      a.checked = false;
+  closeMenu ():void {
+    const burgerIsChecked: HTMLInputElement = <HTMLInputElement>document.getElementById("burger-checkbox");
+    if (burgerIsChecked.checked) {
+      burgerIsChecked.checked = false;
       document.body.style.overflowY = 'visible';
     }
 
   }
 
-  hideOverflow() {
-    let a: HTMLInputElement = <HTMLInputElement>document.getElementById("burger-checkbox");
-    if(a.checked){
+  overflowChangeState():void {
+    const burgerIsChecked: HTMLInputElement = <HTMLInputElement>document.getElementById("burger-checkbox");
+    if(burgerIsChecked.checked){
       document.body.style.overflowY = 'hidden';
     }
-    if(!a.checked){
+    if(!burgerIsChecked.checked){
       document.body.style.overflowY = 'visible';
     }
   }
-
-    ngOnDestroy() {
-        document.body.style.overflowY = 'visible';
-    }
 }
 

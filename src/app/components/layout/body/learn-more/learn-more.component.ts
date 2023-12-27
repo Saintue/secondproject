@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import {Component}  from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Title} from "@angular/platform-browser";
-import {ServiceService} from "../../../../service/service.service";
+import {CartService} from "../../../../services/cart.service";
 
-interface product {
+interface Product {
     id: number,
     title: string,
     price: string,
@@ -18,6 +17,7 @@ interface product {
   styleUrls: ['./learn-more.component.css']
 })
 export class LearnMoreComponent {
+  /*import
   cardsDbOriginal = [
     {number: 1, title:"Упаковка", tiraje:"Тираж от 50: штук",
     content: "Сделано из крафт-бумаги или плотного картона. Упаковки имеют различные формы и расцветки, изготовим форму под заказ.",
@@ -51,20 +51,19 @@ export class LearnMoreComponent {
     this.cardsCopy = this.cardsDbOriginal.slice();
     this.cardsCopy = this.cardsCopy.filter(elem => elem.type.indexOf(sort.toLowerCase()) != -1)
   }
-
-  GetArray = [1,2,3,4,5,6,7,8];
   response: any;
-  constructor(private http: HttpClient, private serviceService : ServiceService) {
+  */
+  constructor(private http: HttpClient, private cartService : CartService) {
   }
 
-  products$ = this.http.get<product[]>("https://fakestoreapi.com/products");
+  products$ = this.http.get<Product[]>("https://fakestoreapi.com/products");
 
 
-  sartir(){
-    this.products$ = this.http.get<product[]>('https://fakestoreapi.com/products/category/jewelery');
+  cardsSortJewelery(){
+    this.products$ = this.http.get<Product[]>('https://fakestoreapi.com/products/category/jewelery');
   }
-addTocart(item: any){
-this.serviceService.addToCart(item);
+addToCart(item: any){
+this.cartService.addToCart(item);
 }
 
 

@@ -2,11 +2,11 @@
   <div class="container">
     <div class="shop__results-versions">
       <div class="shop__results-tabs">
-        <div class="shop__results-tab" *ngFor="let tab of tabs" (click)="TabShow(tab.number); tabSent(tab.number)" [ngClass]="{active: tab.state}">
+        <div class="shop__results-tab" *ngFor="let tab of tabs" (click)="tabShow(tab.tabNumber); tabSet(tab.tabNumber)" [ngClass]="{active: tab.isActive}">
           <div class="shop__results-img-block">
           </div>
           <div class="shop__results-text-block">
-            <h2>V.{{tab.number}}</h2>
+            <h2>V.{{tab.tabNumber}}</h2>
           </div>
         </div>
       </div>
