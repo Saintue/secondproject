@@ -1,0 +1,53 @@
+<div *ngIf="product.length !== 0" class="cart__wrapper">
+    <div class="container">
+        <div>
+            <div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>номер</th>
+                        <th>имя продукиа</th>
+                        <th>картинка продукта</th>
+                        <th>описание</th>
+                        <th>цена</th>
+                        <th>действие</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let item of product; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.title}}</td>
+                        <td><img src="{{item.image}}"></td>
+                        <td>{{item.description}}</td>
+                        <th>{{item.price}}$</th>
+                        <td>
+                            <button class="cart__trash-button" (click)="removeCartItem(item)"><i><img src="assets/img/cart/trash.jpg"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button (click)="clearCart()">удалить все</button></td>
+                        <td><button routerLink="">купить больше</button></td>
+                        <td><button type="submit">к оплате</button></td>
+                        <td><strong>в целом : $ {{total.toFixed(2)}}</strong></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="product.length == 0" class="cart__wrapper">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">Корзина</h5>
+        </div>
+        <div class="center">
+            <h4>корзина пуста, НЕМЫСЛИМО!</h4>
+            <h6>быстро добавь сюда что-либо и потрать свои манисы</h6>
+            <button routerLink="" class="btn btn-primary">быстро шопиться!</button>
+        </div>
+    </div>
+</div>

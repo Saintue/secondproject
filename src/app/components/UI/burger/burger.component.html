@@ -1,5 +1,6 @@
+<div class="burger__menu-wrapper">
 <div class="menu">
-  <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+  <input type="checkbox" id="burger-checkbox" class="burger-checkbox" (click)="overflowChangeState()">
   <label for="burger-checkbox" class="burger"></label>
   <ul class="menu-list">
     <li><a routerLink="/products" RouterLinkActive="active"
@@ -12,3 +13,5 @@
            ariaCurrentWhenActive="page" class="menu-item" (click)="closeMenu()">Контакты</a><li>
   </ul>
 </div>
+</div>
+

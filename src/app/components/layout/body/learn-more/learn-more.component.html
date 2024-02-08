@@ -1,19 +1,20 @@
 <div class="learn-more__cards">
   <div class="container">
-    <input type="button" (click)="sartir()">СОРТИРОВАТЬ
+    <input type="button" (click)="cardsSortJewelery()">СОРТИРОВАТЬ
     <div class="learn-more__cards-wrapper">
-      <div class="learn-more__card" *ngFor="let user of (users$ | async)">
-        <div class="card__txt">
-          <h3>{{user.title}}</h3>
+      <div class="learn-more__card" *ngFor="let product of (products$ | async)">
+        <div class="card__txt-title">
+          <h3>{{product.title}}</h3>
         </div>
         <div class="card__txt">
-          {{user.description}}
+          {{product.description}}
         </div>
         <div class =card__img-wrapper>
         <div class="card__img">
-        <img src="{{user.image}}">
+        <img src="{{product.image}}">
         </div>
         </div>
+        <button (click)="addToCart(product)">В КОРЗИНУ!</button>
         </div>
       </div>
       </div>

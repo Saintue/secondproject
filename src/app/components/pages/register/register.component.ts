@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
-import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators, ValidatorFn} from "@angular/forms";
 
-function confirmPassword(password: string, confirm: string) {
-    return function (form: AbstractControl) {
-        const passwordValue = form.get(password)?.value
-        const confirmValue = form.get(confirm)?.value
-
-        if (passwordValue === confirmValue){
-            return null;
-        }
-        return {passwordMissMatch: true}
-    }
-}
-
+interface RegisterForm extends FormGroup<{
+  firstname: FormControl<string>,
+  lastname:  FormControl<string>,
+  password:  FormControl<string>,
+  confirm:  FormControl<string>,
+  phone:  FormControl<string>,
+  city:  FormControl<string>,
+}>{}
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -26,20 +22,35 @@ export class RegisterComponent {
       {name: "Oriath"},
       {name: "Stormwind"},
   ]
-  registerForm = new FormGroup({
-    firstname: new FormControl("", [Validators.required,]),
-    lastname: new FormControl("", [Validators.required,]),
-    password: new FormControl("", [Validators.required,]),
-    confirm:new FormControl("", [Validators.required,]),
-    phone:new FormControl("", [Validators.required, Validators.pattern('^[0-9]*$')]),
-    city:new FormControl(this.states, [Validators.required,]),
-  }, [confirmPassword('password','confirm')]
-      )
+    registerForm: RegisterForm;
     isSumbmited:boolean = false;
 
+    constructor(private formBuilder: FormBuilder) {
+      this.registerForm = this.formBuilder.nonNullable.group({
+        firstname: ['', Validators.required],
+        lastname: ['', Validators.required],
+        password: ['', Validators.required],
+        confirm: ['', Validators.required],
+        phone: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+        city: ['', Validators.required],
+      }, {
+        validators: this.confirmPassword('password','confirm')
+      })
+    }
+  private confirmPassword(password: string, confirm: string): ValidatorFn {
+    return  (form: AbstractControl): ValidationErrors | null => {
+      const passwordValue = form.get(password)?.value
+      const confirmValue = form.get(confirm)?.value
+      if (passwordValue === confirmValue){
+        return null;
+      }
+      return {passwordMissMatch: true}
+    }
+  }
 
     onSubmit(): void {
-    console.log("submit data", this.registerForm.value);
+        console.log("submit data", this.registerForm.value);
         this.isSumbmited = true;
     }
 }
+

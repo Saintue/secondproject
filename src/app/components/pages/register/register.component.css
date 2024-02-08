@@ -29,6 +29,11 @@
   font-weight: 600;
 }
 
+.register__aligner{
+  display: flex;
+  justify-content: center;
+}
+
 .button {
   background: #037ef3;
   color: #fff;
@@ -50,4 +55,52 @@
 
 .error {
   color: red;
+}
+
+@media screen and (max-height: 1022px){
+  .register__form {
+    padding: 20px;
+    max-width: 550px;
+  }
+
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #777;
+  }
+
+  .input {
+    width: 100%;
+    padding: 5px 5px;
+    border: 0;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #555;
+    font-weight: 600;
+  }
+
+  .register__aligner{
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    background: #037ef3;
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 25px 15px;
+    border: 0;
+    font-size: 18px;
+    &:hover {
+      background: #0271da;
+    }
+  }
 }

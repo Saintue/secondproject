@@ -2,6 +2,7 @@
   margin-top: 15px;
   margin-left: 30px;
 }
+
 .burger-checkbox {
   position: absolute;
   visibility: hidden;
@@ -47,7 +48,6 @@
   top: 50px;
   left: 0;
   position: absolute;
-  display: grid;
   gap: 12px;
   padding: 42px 0;
   margin: 0;
@@ -72,4 +72,15 @@
 }
 .burger-checkbox:checked ~ .menu-list {
   transform: translateX(0);
+}
+
+
+@media screen and (max-width: 500px){
+  .menu-item {
+
+    padding: 4px;
+
+    font-size: 9px;
+
+  }
 }

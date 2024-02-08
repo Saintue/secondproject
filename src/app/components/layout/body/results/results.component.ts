@@ -7,11 +7,24 @@ import { Component } from '@angular/core';
 })
 export class ResultsComponent {
  tabs =[
-    {number: 1, state: true, },
-    {number: 2, state: true, },
-    {number: 3, state: true, },
+    {tabNumber: 1, isActive: true, },
+    {tabNumber: 2, isActive: false, },
+    {tabNumber: 3, isActive: false, },
   ]
-  TabShow = (number:number) => {
-   this.tabs[number - 1].state =  !this.tabs[number - 1].state;
+
+  tabCurrentActiveNumber:number = 1;
+
+  tabShow (number:number):void {
+   this.tabs[number - 1].isActive = true;
+    this.tabs.forEach(tab =>{
+      tab.isActive = (tab.tabNumber === number) ? true : false;
+    })
+}
+
+tabSet(number:number){
+   return this.tabCurrentActiveNumber = number;
+}
+tabGet(){
+   return this.tabCurrentActiveNumber;
 }
 }
